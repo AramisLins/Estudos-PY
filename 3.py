@@ -1,9 +1,14 @@
-numeros =[]
+valores = [[0,0],[0,0],[0,0]]
+valor = 0
+numNegativo = 0
 
-for i in range(10):
-    num = int(input(f"Digite o {i+1} numero: "))
-    numeros.append(num)
-    
-    
-numeros.sort(reverse=True)
-print(numeros)
+for l in range(3):
+    for c in range(2):
+        valores[l][c] = int(input("Digite o valor"))
+        if valores[l][c] > 0:
+            valor = valor + valores[l][c]
+        else :
+            numNegativo += 1
+            
+print(valor)
+print(numNegativo)
